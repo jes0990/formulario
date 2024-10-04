@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Estudiante - ITH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Estudiante</h1>
+        <form action="registro_estudiante.php" method="POST">
+            <div class="form-group">
+                <label for="numero_control">Número de Control:</label>
+                <input type="text" id="numero_control" name="numero_control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido_paterno">Apellido Paterno:</label>
+                <input type="text" id="apellido_paterno" name="apellido_paterno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apellido_materno">Apellido Materno:</label>
+                <input type="text" id="apellido_materno" name="apellido_materno" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre(s):</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label>Sexo:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="sexo" value="Masculino" required> Masculino</label>
+                    <label><input type="radio" name="sexo" value="Femenino" required> Femenino</label>
+                    <label><input type="radio" name="sexo" value="Otro" required> Otro</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="celular">Número de Celular:</label>
+                <input type="tel" id="celular" name="celular" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <textarea id="direccion" name="direccion" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="periodo">Periodo Escolar de Ingreso:</label>
+                <input type="text" id="periodo" name="periodo" placeholder="Ej: Agosto - Diciembre 2024" required>
+            </div>
+
+            <div class="form-group">
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera" required>
+                    <option value="">Seleccione su carrera</option>
+                    <option value="Ingeniería en Sistemas Computacionales">Ingeniería en Sistemas Computacionales</option>
+                    <option value="Ingeniería Industrial">Ingeniería Industrial</option>
+                    <option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
+                    <option value="Ingeniería Mecatrónica">Ingeniería Mecatrónica</option>
+                    <option value="Ingeniería en Gestión Empresarial">Ingeniería en Gestión Empresarial</option>
+                    <!-- Agregar más carreras si es necesario -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Registrar Estudiante</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
